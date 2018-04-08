@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>AJAX & jQuery - Fourmi de Langton</title>
+        <link type="text/css" rel="stylesheet" href="./css/reset.css" />
+		<link type="text/css" rel="stylesheet" href="./css/base.css" />
+        <link type="text/css" rel="stylesheet" href="./css/index.css" />
+    </head>
+    <body>
+        <div class="body">
+            <h1>AJAX & jQuery - Fourmi de Langton</h1>
+			<ol>
+				<li>Aller sur cette page: <a href="langton.html" target="_blank">langton.html</a></li>
+                <li>
+                    <h2>La Simulation</h2>
+                    <div class="condition">
+                        <h3>Conditions de Simulation</h3>
+                        <ul>
+                            <li>Si la case est <b>Blanche</b>, la fourmi la colore en <b>Noir</b> et tourne &agrave; <b>droite</b></li>
+                            <li>Si la case est <b>Noire</b>, la fourmi la colore en <b>Blanc</b> et tourne &agrave; <b>gauche</b></li>
+                        </ul>
+                        <p class="remark">Avec Blanc = '#FFFFFF' et Noir = '#000000'</p>
+                    </div>
+                    <p>Modifier les fichiers <a href="./js/langton.js" target="_blank">js/langton.js</a> et <a href="./js/simulation.js" target="_blank">js/simulation.js</a> pour ajouter les fonctionnalit&eacute;s suivantes:</p>
+                    <ol>
+                        <li><span class="title">M&eacute;thode 'displayAntInfo'</span><span class="feature">Affiche les informations de la fourmi dans le panneau 'Fourmi'</span><span class="help">Ant.X, Ant.Y, Ant.Direction, Ant.NbSteps</span></li>
+                        <li><span class="title">Bouton 'R&eacute;initialiser'</span><span class="feature">Modifie la taille de la grille suivant la s&eacute;lection et recentre la fourmi</span><span class="help">Grid.Size, Simulation.Size, Ant.Reset(..)</span></li>
+                        <li><span class="title">Radio Bouton 'Taille'</span><span class="feature">R&eacute;initialise la simulation lorsque la taille change</span><span class="help">M&ecirc;me action que 2.b</span></li>
+                        <li><span class="title">Bouton 'Avancer'</span><span class="feature">Colorie la grille et Avance la fourmi du nombre d'&eacute;tapes selon les conditions de simulation</span><span class="help">Grid.GetColor(..), Ant.Turn(..), Simulation.NbSteps</span></li>
+                        <li><span class="title">Bouton 'D&eacute;marrer'</span><span class="feature">Lance le parcours de la fourmi jusqu'&agrave; sa sortie de la grille [Grid.GetColor(..) = null]</span><span class="help">Action 2.d avec P&eacute;riodicit&eacute; = Intervalle</span></li>
+                        <li><span class="title">Bouton 'D&eacute;marrer'</span><span class="feature">Lors du parcours de la fourmi (2.e), utiliser ce m&ecirc;me bouton pour stopper la simulation</span><span class="help">Permuter le texte du bouton en 'Arr&ecirc;ter'</span></li>
+                        <li><span class="title">R&eacute;initialisation</span><span class="feature">Lors de la r&eacute;initialisation (2.b &amp; 2.c), stopper la simulation</span></li>
+                    </ol>
+                    <p>Que constatez-vous ?</p>
+                    <ul class="observation">
+                        <li><span class="title">Au d&eacute;but de l'&eacute;volution de la Fourmi</span><span class="feature">Nb Etapes = 7, 95, 184, 368, 384, 472</span></li>
+                        <li><span class="title">De 500 &agrave; 10 000 mouvements</span><span class="feature">Nb Etapes = 500, 750, 1000 ... 10 000</span></li>
+                        <li><span class="title">A partir de 10 000 mouvements</span><span class="feature">Nb Etapes = 10 330, 10 540, 10 850 ... <b>&infin;</b></span><span class="help">Agrandissez la grille si besoin</span></li>
+                    </ul>
+                    <p class="remark">Remarque: Ce ph&eacute;nom&egrave;ne est commun&eacute;ment appel&eacute; <a href="https://fr.wikipedia.org/wiki/Algorithme_%C3%A9mergent" target="_blank">Emergence</a>.</p>
+                </li>
+                <li>
+                    <h2>Les Patterns</h2>
+                    <div class="condition">
+                        <h3>Conditions de Simulation</h3>
+                        <p>D'autres conditions sont disponibles ici: <a href="https://api.myjson.com/bins/crrrn" target="_blank">https://api.myjson.com/bins/crrrn</a></p>
+                    </div>
+                    <p>En modifiant les fichiers <a href="./js/langton.js" target="_blank">js/langton.js</a> et <a href="./js/pattern.js" target="_blank">js/pattern.js</a>, ajouter les fonctionnalités suivantes:</p>
+                    <ol>
+                        <li><span class="title">Chargement AJAX</span><span class="feature">Afficher le panneau 'Condition' et Charger les donn&eacute;es distantes dans la liste d&eacute;roulante</span><span class="help">Pattern.onReady(), CSS = .condition</span></li>
+                        <li><span class="title">Affichage des Conditions</span><span class="feature">Selon le pattern s&eacute;lectionn&eacute;, afficher les conditions dans le tableau 'CurrentPattern'</span><span class="help">Pattern.GetHtmlRow(..)</span></li>
+                        <li><span class="title">Utilisation des Conditions</span><span class="feature">Utiliser les valeurs du tableau lors du lancement de la simulation</span><span class="help">Ant.Turn(..)</span></li>
+                        <li><span class="title">Liste D&eacute;roulante 'Pattern'</span><span class="feature">Lors de la modification d'un pattern, r&eacute;initialiser la simulation</span></li>
+                        <li><span class="title">Listes 'Couleur'</span><span class="feature">Lorsque la couleur change, supprimer toutes les lignes suivantes</span></li>
+                        <li><span class="title">Listes 'Couleur'</span><span class="feature">Lorsque la couleur est diff&eacute;rente de 'Blanc', ajouter une seule ligne</span><span class="help">avec 'Si Couleur' = Couleur S&eacute;lectionn&eacute;e</span></li>
+                        <li><span class="title">Listes 'Couleur'</span><span class="feature">Lorsque la couleur existe d&eacute;j&agrave; dans les lignes pr&eacute;c&eacute;dentes, alerter l'utilisateur</span><span class="help">et s&eacute;lectionner la couleur 'Blanc'</span></li>
+                    </ol>
+                    <p>Que constatez-vous ?</p>
+                    <ul class="observation">
+                        <li><span class="title">Quelque soit le pattern utilis&eacute;</span><span class="feature">Nb Etapes = <b>&infin;</b></span><span class="help">Agrandissez la grille si besoin</span></li>
+                    </ul>
+                </li>
+			</ol>
+        </div>
+    </body>
+</html>

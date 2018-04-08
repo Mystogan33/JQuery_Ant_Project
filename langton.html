@@ -1,0 +1,93 @@
+<html>
+<head>
+  <title>AJAX & jQuery - Fourmi de Langton</title>
+  <link type="text/css" rel="stylesheet" href="./css/reset.css" />
+  <link type="text/css" rel="stylesheet" href="./css/base.css" />
+  <link type="text/css" rel="stylesheet" href="./css/langton.css" />
+  <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="./js/ant.js"></script>
+  <script type="text/javascript" src="./js/grid.js"></script>
+  <script type="text/javascript" src="./js/pattern.js"></script>
+  <script type="text/javascript" src="./js/simulation.js"></script>
+  <script type="text/javascript" src="./js/langton.js"></script>
+</head>
+<body>
+  <div class="body">
+    <h1>AJAX & jQuery - Fourmi de Langton</h1>
+    <div class="container clearfix">
+      <div class="left grid">
+        <canvas id="Grid"></canvas>
+      </div>
+      <div class="left panel">
+        <div class="condition">
+          <fieldset>
+            <legend>Condition</legend>
+            <p>
+              <label for="Pattern">
+                <span>Pattern</span>
+                <select id="Pattern" class="select"></select>
+              </label>
+            </p>
+            <table id="CurrentPattern" class="pattern-table">
+              <thead>
+                <tr>
+                  <th class="if-color" rowspan="2">Si<br/>Couleur</th>
+                  <th class="then" colspan="2">Alors</th>
+                </tr>
+                <tr>
+                  <th class="then-color">Couleur</th>
+                  <th class="then-direction">Direction</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </fieldset>
+        </div>
+        <div class="simulation">
+          <fieldset>
+            <legend>Simulation</legend>
+            <ul>
+              <li>Taille</li>
+              <li><label for="Size50"><input type="radio" id="Size50" name="size" value="50" class="radio">50</label></li>
+              <li><label for="Size75"><input type="radio" id="Size75" name="size" value="75" class="radio" checked="checked">75</label></li>
+              <li><label for="Size100"><input type="radio" id="Size100" name="size" value="100" class="radio">100</label></li>
+              <li><label for="Size150"><input type="radio" id="Size150" name="size" value="150" class="radio">150</label></li>
+              <li><label for="Size200"><input type="radio" id="Size200" name="size" value="200" class="radio">200</label></li>
+            </ul>
+            <p>
+              <label for="NbSteps"><span>Nb Etapes</span><input type="number" id="NbSteps" class="textbox" min="1" value="1"></label>
+            </p>
+            <p>
+              <label for="Interval">
+                <span>Intervalle</span>
+                <select id="Interval" class="select">
+                  <option value="10">10 ms</option>
+                  <option value="50">50 ms</option>
+                  <option value="100" selected="selected">100 ms</option>
+                  <option value="250">250 ms</option>
+                  <option value="500">500 ms</option>
+                  <option value="1000">1 s</option>
+                </select>
+              </label>
+            </p>
+            <p class="text-right">
+              <button id="Reset">R&eacute;initialiser</button>
+              <button id="MoveForward">Avancer</button>
+              <button id="Start">D&eacute;marrer</button>
+            </p>
+          </fieldset>
+        </div>
+        <div class="ant">
+          <fieldset>
+            <legend>Fourmi</legend>
+            <p><span>X</span><span class="ant-x"></span></p>
+            <p><span>Y</span><span class="ant-y"></span></p>
+            <p><span>Direction</span><span class="ant-direction"></span></p>
+            <p><span>Nb Etapes</span><span class="ant-nb-steps"></span></p>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

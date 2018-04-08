@@ -1,0 +1,150 @@
+
+body {
+    margin: 8px;
+    font-family: verdana;
+    font-size: 18px;
+    background-color: #1F5FA0;
+    color: #333;
+}
+
+.clearfix {
+}
+
+.clearfix:after {
+    content: ".";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+h1 {
+    margin: 0;
+    padding: 25px 0;
+    font-size: 2.6em;
+    font-weight: bold;
+    color: #1F5FA0;
+    text-align: center;
+}
+
+h2 {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #1F5FA0;
+}
+
+h3 {
+    margin: 0;
+    padding: 5px 0;
+    font-size: 1em;
+    font-weight: bold;
+    color: #1F5FA0;
+}
+
+a {
+    color: #072C98;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #7F0000;
+}
+
+a:visited {
+    color: #072C98;
+}
+
+b {
+	font-weight: bold;
+}
+
+fieldset {
+    padding: 0 15px;
+    border: solid 2px #1F5FA0;
+    font-size: 0.9em;
+}
+
+legend {
+    margin: 0;
+    padding: 0 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #1F5FA0;
+}
+
+input {
+    font-size: 1em;
+}
+
+button {
+    padding: 3px 5px;
+    font-weight: bold;
+}
+
+button:hover {
+    color: #7F0000;
+    cursor: pointer;
+}
+
+select {
+    font-size: 1em;
+}
+
+table {
+    border-width: 1px;
+    border-color: #333;
+    border-collapse: collapse;
+}
+
+table th {
+    border-width: 1px;
+    padding: 5px 10px;
+    border: 0 none;
+    background-color: #1F5FA0;
+    color: #FFF;
+    font-size: 0.9em;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+table tr:nth-child(even) td {
+    background-color: #D9D9D9;
+}
+
+table td {
+    border-width: 1px;
+    padding: 5px;
+    border: solid 1px #333;
+    border-left: 0 none;
+    border-right: 0 none;
+    background-color: #FFF;
+    vertical-align: middle;
+    font-size: 0.8em;
+}
+
+table button {
+    padding: 0 2px;
+}
+
+.body {
+    margin: 0 auto;
+    padding: 0 50px;
+    width: 1250px;
+    background-color: #FFF;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.text-right {
+    text-align: right;
+}
+

@@ -1,0 +1,108 @@
+
+.body p {
+    margin: 20px 0 10px 0;
+    padding: 0;
+    font-size: 1em;
+}
+
+.body ul {
+	list-style: square outside;
+	padding: 8px 0 0 40px;
+}
+
+.body ol {
+	list-style: decimal outside;
+    margin: 0;
+	padding: 25px 0 25px 40px;
+}
+
+.body ol ol {
+    list-style: lower-latin outside;
+    margin: 10px 0;
+    padding: 0 0 0 40px;
+}
+
+.body li {
+    margin: 10px 0 30px 0;
+    padding: 0;
+    font-size: 1.2em;
+}
+
+.body li li {
+    margin: 10px 0;
+    padding: 0;
+    font-size: 0.8em;
+}
+
+.body li li span {
+	display: inline-block;
+}
+
+.body .title {
+	width: 220px;
+	font-size: 0.8em;
+	font-weight: bold;
+}
+
+.body .feature {
+    width: 650px;
+    font-size: 0.8em;
+}
+
+.body .observation {
+    padding-top: 0;
+}
+
+.body .observation .title {
+    width: 350px;
+}
+
+.body .observation .feature {
+    width: 520px;
+}
+
+.body .help {
+	font-size: 0.6em;
+	font-style: italic;
+}
+
+.body .remark {
+	font-size: 0.7em;
+	font-style: italic;
+}
+
+
+.body .condition {
+	margin: 0 auto;
+	padding: 5px 10px;
+	width: 600px;
+	background-color: #EEE;
+}
+
+.body .condition h3 {
+	padding: 3px 0;
+	font-size: 0.8em;
+}
+
+.body .condition p {
+    margin: 0;
+    padding: 3px 0;
+    font-size: 0.7em;
+}
+
+.body .condition ul {
+	padding-top: 0;
+}
+
+.body .condition li {
+    margin: 3px 0;
+    padding: 0;
+    font-size: 0.7em;
+}
+
+.body .condition .remark {
+    margin: 0;
+	padding: 3px 0;
+	text-align: right;
+	font-size: 0.6em;
+}

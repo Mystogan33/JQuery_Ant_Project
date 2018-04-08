@@ -1,0 +1,87 @@
+
+.container {
+    padding: 0 0 20px 0;
+}
+
+.container .grid{
+}
+
+.container .panel {
+    width: 400px;
+}
+
+.container .panel fieldset p {
+    padding: 10px 0;
+}
+
+.container .panel fieldset p span:first-child {
+    display: inline-block;
+    width: 180px;
+}
+
+.container .panel fieldset .textbox {
+    width: 150px;
+    margin-left: 6px;
+}
+
+.container .panel fieldset .select {
+    width: 150px;
+}
+
+.container .panel .condition {
+    margin: 0 0 20px 20px;
+    padding: 0;
+    display: none;
+}
+
+.container .panel .condition .pattern-table {
+    margin: 0 auto 10px auto;
+    width: 90%;
+}
+
+.container .panel .condition .pattern-table th {
+    padding: 3px 5px;
+    font-size: 0.8em;
+}
+
+.container .panel .condition .pattern-table td {
+    padding: 2px 5px;
+    font-size: 0.7em;
+    text-align: center;
+}
+
+.container .panel .simulation {
+    margin: 0 0 20px 20px;
+    padding: 0;
+}
+
+.container .panel .simulation ul {
+    margin: 10px 0;
+    list-style: none;
+}
+
+.container .panel .simulation ul:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.container .panel .simulation li {
+    float: left;
+    margin: 0 13px 0 0;
+    padding: 0;
+}
+
+.container .panel .simulation li:last-child {
+    margin-right: 0;
+}
+
+.container .panel .ant {
+    margin: 0 0 20px 20px;
+    padding: 0;
+}
+
+.container .panel .ant .ant-nb-steps {
+    font-weight: bold;
+    font-size: 1.1em;
+}
